@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — DE-DON SHOE PLC</title>
+<meta name="description" content="Browse the DE-DON SHOE PLC collections — formal shoes, loafers, sandals and palms. Hand-finished in Aba, Abia State.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#242424;
+  --milk:#F5F1E8;
+  --ink-75:rgba(36,36,36,.75);
+  --ink-55:rgba(36,36,36,.55);
+  --ink-40:rgba(36,36,36,.4);
+  --ink-30:rgba(36,36,36,.3);
+  --ink-20:rgba(36,36,36,.2);
+  --ink-12:rgba(36,36,36,.12);
+  --ink-05:rgba(36,36,36,.05);
+  --milk-70:rgba(245,241,232,.7);
+  --milk-50:rgba(245,241,232,.5);
+  --milk-30:rgba(245,241,232,.3);
+  --milk-15:rgba(245,241,232,.15);
+  --wa:#25D366;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;
+  color:var(--ink);background:var(--milk);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+p{margin:0 0 1.1em}
+::selection{background:var(--ink);color:var(--milk)}
+
+.container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1rem;font-size:.68rem;
+  letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--ink-75)}
+.eyebrow::before{content:"";flex:none;width:24px;height:1px;background:var(--ink-40)}
+.eyebrow--center{justify-content:center}
+.section{padding:clamp(52px,9vw,118px) 0}
+.section-title{font-size:clamp(1.6rem,4.2vw,3.4rem);font-weight:500;
+  color:var(--ink);overflow-wrap:break-word}
+.section-title em{font-style:italic}
+.section-head{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:flex-end;
+  justify-content:space-between;margin-bottom:clamp(1.8rem,5vw,4rem)}
+.section-head--center{justify-content:center;text-align:center}
+.lead{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink-75)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.95rem 1.9rem;font-size:.72rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;border:1px solid transparent;transition:all .3s var(--ease);
+  cursor:pointer;text-align:center;line-height:1.2;min-height:46px}
+.btn--primary{background:var(--ink);color:var(--milk);border-color:var(--ink)}
+.btn--primary:hover{background:transparent;color:var(--ink)}
+.btn--outline{border-color:var(--ink-30);color:var(--ink)}
+.btn--outline:hover{background:var(--ink);border-color:var(--ink);color:var(--milk)}
+.btn--sm{padding:.7rem 1.3rem;font-size:.62rem;letter-spacing:.14em;min-height:42px}
+.wa-icon{width:1.15em;height:1.15em;fill:var(--wa);flex:none;display:inline-block;pointer-events:none}
+.link-arrow{display:inline-flex;align-items:center;gap:.55rem;padding-bottom:.35rem;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  border-bottom:1px solid var(--ink-30);transition:.3s}
+.link-arrow::after{content:"\2192";transition:transform .3s}
+.link-arrow:hover{border-color:var(--ink)}
+.link-arrow:hover::after{transform:translateX(4px)}
+
+.brand{display:flex;align-items:center;
+  gap:clamp(.55rem,1.6vw,.95rem);min-width:0;text-decoration:none}
+.brand__mark{flex:none;width:clamp(42px,4.4vw,56px);
+  height:clamp(42px,4.4vw,56px);display:block}
+.brand__text{display:flex;flex-direction:column;min-width:0;line-height:1}
+.brand__name{
+  font-family:var(--serif);font-weight:800;
+  font-size:clamp(1rem,2.8vw,1.45rem);letter-spacing:.03em;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.brand__sub{
+  margin-top:.32rem;font-family:var(--sans);
+  font-size:clamp(.52rem,1.15vw,.66rem);font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--ink-55);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.brand--light .brand__name{color:var(--milk)}
+.brand--light .brand__sub{color:var(--milk-50)}
+
+.topbar{background:var(--ink);color:var(--milk-70);font-size:.6rem;
+  letter-spacing:.14em;text-transform:uppercase}
+.topbar__inner{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:.3rem .9rem;padding-block:.55rem;text-align:center}
+.topbar__sep{width:1px;height:10px;background:var(--milk-30)}
+@media (max-width:520px){
+  .topbar{font-size:.54rem;letter-spacing:.1em}
+  .topbar__sep{display:none}
+}
+
+.header{position:sticky;top:0;z-index:90;background:rgba(245,241,232,.97);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ink-12);transition:box-shadow .3s}
+.header.is-scrolled{box-shadow:0 10px 30px -18px rgba(36,36,36,.4)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;
+  gap:clamp(.4rem,2vw,1.5rem);padding-block:.65rem}
+.header__actions{display:flex;align-items:center;gap:.5rem;flex:none}
+.nav{display:flex;align-items:center;gap:1.5rem}
+.nav a{position:relative;padding-block:.3rem;font-size:.72rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--ink);transition:width .3s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{width:100%}
+.nav a[aria-current="page"]{font-weight:600}
+.nav__cta{display:none}
+.nav-toggle{display:none;width:44px;height:44px;flex-direction:column;
+  align-items:center;justify-content:center;gap:5px;flex:none}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);
+  transition:.3s var(--ease)}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-scrim{position:fixed;inset:0;z-index:80;background:rgba(36,36,36,.45);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+@media (max-width:560px){ .header__cta{display:none} }
+@media (max-width:1080px){
+  .nav{position:fixed;top:0;right:0;z-index:85;height:100dvh;width:min(340px,86vw);
+    flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;
+    padding:clamp(4.5rem,12vw,5.5rem) clamp(1.4rem,5vw,2.2rem) 2rem;
+    background:var(--milk);border-left:1px solid var(--ink-12);
+    transform:translateX(105%);transition:transform .4s var(--ease);
+    overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .nav.is-open{transform:none}
+  .nav a{font-size:.95rem;padding-block:.85rem;border-bottom:1px solid var(--ink-12)}
+  .nav a::after{display:none}
+  .nav a[aria-current="page"]{font-weight:600}
+  .nav__cta{display:inline-flex;margin-top:1.4rem;width:100%}
+  .nav-toggle{display:flex;z-index:86}
+}
+
+.page-head{position:relative;overflow:hidden;
+  padding:clamp(48px,10vw,118px) 0 clamp(36px,7vw,78px);
+  background:var(--ink);color:var(--milk)}
+.page-head::after{content:"";position:absolute;right:-90px;bottom:-140px;
+  width:420px;height:420px;border:1px solid var(--milk-15);
+  border-radius:50%;pointer-events:none}
+.page-head h1{font-size:clamp(1.8rem,6vw,4rem);font-weight:500;
+  position:relative;z-index:1;overflow-wrap:break-word;color:var(--milk)}
+.page-head h1 em{font-style:italic}
+.page-head p{max-width:60ch;margin-top:.9rem;color:var(--milk-70);
+  position:relative;z-index:1}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:.3rem .55rem;margin-bottom:1rem;
+  font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--milk-50)}
+.breadcrumb a{color:var(--milk-70)}
+.breadcrumb a:hover{color:var(--milk)}
+@media (max-width:520px){ .breadcrumb{font-size:.56rem;letter-spacing:.1em} }
+
+/* Collections list — large cards */
+.collection-list{display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(1rem,2.4vw,2rem)}
+.collection{
+  position:relative;display:flex;align-items:flex-end;overflow:hidden;
+  aspect-ratio:4/3;background:var(--ink);
+}
+.collection img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.82;
+  transition:transform .9s var(--ease),opacity .5s}
+.collection::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(15,15,15,.94),rgba(36,36,36,.1) 70%)}
+.collection:hover img{transform:scale(1.05);opacity:.95}
+.collection__body{position:relative;z-index:2;
+  padding:clamp(1.2rem,2.6vw,2rem);color:var(--milk);min-width:0}
+.collection__body span{font-size:.58rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--milk-70)}
+.collection__body h3{margin:.4rem 0 0;
+  font-size:clamp(1.2rem,2.4vw,1.9rem);color:var(--milk);overflow-wrap:break-word}
+.collection__body p{margin:.5rem 0 0;font-size:.88rem;
+  color:var(--milk-70);line-height:1.55}
+.collection__body .link-arrow{
+  margin-top:1.2rem;color:var(--milk);border-color:var(--milk-50);
+}
+.collection__body .link-arrow:hover{border-color:var(--milk)}
+@media (max-width:720px){
+  .collection-list{grid-template-columns:1fr}
+  .collection{aspect-ratio:16/11}
+}
+
+/* Collection showcase gallery */
+.showcase-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:clamp(.6rem,1.6vw,1.2rem);
+}
+.showcase-item{
+  position:relative;overflow:hidden;background:var(--ink-05);
+  aspect-ratio:4/5;
+}
+.showcase-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease);
+}
+.showcase-item:hover img{transform:scale(1.06)}
+.showcase-item figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:.7rem .8rem;
+  background:linear-gradient(to top,rgba(15,15,15,.9),transparent);
+  color:var(--milk);
+  font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+}
+@media (max-width:1080px){
+  .showcase-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:760px){
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* CTA band */
+.cta-band{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;
+  align-items:center;padding:clamp(1.4rem,5vw,3.2rem);
+  border:1px solid var(--ink-20)}
+.cta-band__actions{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+@media (max-width:860px){ .cta-band{grid-template-columns:1fr;gap:1.4rem} }
+@media (max-width:620px){
+  .cta-band__actions{width:100%;align-items:stretch}
+  .cta-band__actions .btn{width:100%}
+  .cta-band__actions .link-arrow{align-self:flex-start}
+}
+
+/* Footer */
+.footer{position:relative;padding-top:clamp(2.6rem,7vw,5.2rem);
+  background:var(--ink);color:var(--milk)}
+.footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--milk-30),transparent)}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;
+  gap:2rem;padding-bottom:2.2rem}
+.footer h4{margin-bottom:.9rem;font-family:var(--sans);font-size:.66rem;
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--milk-50)}
+.footer a,.footer p{display:block;margin:0 0 .5rem;font-size:.86rem;
+  color:var(--milk-70)}
+.footer a:hover{color:var(--milk)}
+.footer__brand p{max-width:34ch;margin-top:1rem}
+.footer__bottom{display:flex;flex-wrap:wrap;gap:.4rem 2rem;
+  justify-content:space-between;padding-block:1.1rem;
+  border-top:1px solid var(--milk-15);font-size:.7rem;color:var(--milk-50)}
+@media (max-width:980px){ .footer__grid{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){
+  .footer__grid{grid-template-columns:1fr;gap:1.6rem}
+  .footer__bottom{flex-direction:column;gap:.3rem;text-align:center}
+}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mark-dark" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#242424" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#242424" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#242424" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#242424"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#242424" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="mark-light" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#F5F1E8" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#F5F1E8"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#F5F1E8" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="wa-icon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Handcrafted in Aba, Abia State</span>
+    <span class="topbar__sep" aria-hidden="true"></span>
+    <span>Nationwide delivery across Nigeria</span>
+  </div>
+</div>
+
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="DE-DON SHOE PLC — Home">
+      <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-dark"></use></svg>
+      <span class="brand__text">
+        <span class="brand__name">DE-DON SHOE PLC</span>
+        <span class="brand__sub">Step With Confidence</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="collections.html" aria-current="page">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav__cta btn btn--primary btn--sm" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm header__cta" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim" hidden></div>
+
+<main>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Collections</span>
+      </div>
+      <h1>Our <em>Collections</em></h1>
+      <p>Four distinct families of footwear — formal shoes, loafers, sandals and palms. All hand-finished in our Aba workshop.</p>
+    </div>
+  </section>
+
+  <!-- Large collection entry cards -->
+  <section class="section">
+    <div class="container">
+      <div class="collection-list">
+
+        <a class="collection reveal" href="order.html?category=Formal">
+          <img src="../img/shoe 3.webp"
+               alt="Formal leather Oxford shoes"
+               loading="lazy" decoding="async">
+          <div class="collection__body">
+            <span>3 Styles</span>
+            <h3>Formal Shoes</h3>
+            <p>Closed and open-lace formals, built on a proper last with stitched leather soles. For the office, the occasion, the everyday that deserves better than average.</p>
+            <span class="link-arrow">Browse Collection</span>
+          </div>
+        </a>
+
+        <a class="collection reveal" href="order.html?category=Loafers">
+          <img src="../img/shoe4.webp"
+               alt="Leather penny loafers"
+               loading="lazy" decoding="async">
+          <div class="collection__body">
+            <span>3 Styles</span>
+            <h3>Loafers</h3>
+            <p>Slip-on comfort without losing the sharpness. Penny, tassel and suede loafers — cut and finished by hand in our Aba workshop.</p>
+            <span class="link-arrow">Browse Collection</span>
+          </div>
+        </a>
+
+        <a class="collection reveal" href="order.html?category=Sandals">
+          <img src="../img/sandals3.webp"
+               alt="Braided leather sandals"
+               loading="lazy" decoding="async">
+          <div class="collection__body">
+            <span>3 Styles</span>
+            <h3>Sandals</h3>
+            <p>Braided and slingback leather sandals, built for warm days and long wear. Contoured footbeds, hand-worked straps.</p>
+            <span class="link-arrow">Browse Collection</span>
+          </div>
+        </a>
+
+        <a class="collection reveal" href="order.html?category=Palms">
+          <img src="../img/palm3.avif"
+               alt="Leather palm slippers"
+               loading="lazy" decoding="async">
+          <div class="collection__body">
+            <span>3 Styles</span>
+            <h3>Palms</h3>
+            <p>The palm slipper is a Nigerian staple. Ours are leather — single-band or woven, hand-finished. Light, breathable, and made for the climate.</p>
+            <span class="link-arrow">Browse Collection</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Showcase — 10 real product images -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Collection Showcase</p>
+          <h2 class="section-title">Ten pieces,<br><em>four families.</em></h2>
+          <p class="lead" style="max-width:56ch">A closer look at the footwear we make — formal shoes, loafers, sandals and palms. Each image matches the collection it belongs to.</p>
+        </div>
+      </div>
+
+      <div class="showcase-grid">
+
+        <!-- Formal Shoes -->
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe5.jpg"
+               alt="Formal leather Oxford shoe"
+               loading="lazy" decoding="async">
+          <figcaption>Formal · Oxford</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe 3.webp"
+               alt="Formal leather Derby shoe"
+               loading="lazy" decoding="async">
+          <figcaption>Formal · Derby</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe6.jpg"
+               alt="Formal leather Brogue shoe"
+               loading="lazy" decoding="async">
+          <figcaption>Formal · Brogue</figcaption>
+        </figure>
+
+        <!-- Loafers -->
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe7.jpg"
+               alt="Penny leather loafer"
+               loading="lazy" decoding="async">
+          <figcaption>Loafer · Penny</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe 3.webp"
+               alt="Black leather loafer"
+               loading="lazy" decoding="async">
+          <figcaption>Loafer · Black</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/shoe6.jpg"
+               alt="Suede leather loafer"
+               loading="lazy" decoding="async">
+          <figcaption>Loafer · Suede</figcaption>
+        </figure>
+
+        <!-- Sandals -->
+        <figure class="showcase-item reveal">
+          <img src="../img/sandals2.webp"
+               alt="Braided leather sandal"
+               loading="lazy" decoding="async">
+          <figcaption>Sandal · Braided</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/sandals1.webp"
+               alt="Slingback leather sandal"
+               loading="lazy" decoding="async">
+          <figcaption>Sandal · Slingback</figcaption>
+        </figure>
+
+        <!-- Palms -->
+        <figure class="showcase-item reveal">
+          <img src="../img/palm1.jpg"
+               alt="Leather palm slipper"
+               loading="lazy" decoding="async">
+          <figcaption>Palm · Leather</figcaption>
+        </figure>
+
+        <figure class="showcase-item reveal">
+          <img src="../img/palm2.jpg"
+               alt="Woven leather palm slipper"
+               loading="lazy" decoding="async">
+          <figcaption>Palm · Woven</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container cta-band reveal">
+      <div>
+        <p class="eyebrow">Order Directly</p>
+        <h2 class="section-title">Can't decide?<br><em>We'll help.</em></h2>
+        <p>Message us on WhatsApp with your usual size and what you're looking for. Our team will recommend a pair.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary"
+           href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20help%20choosing%20a%20pair."
+           target="_blank" rel="noopener">
+          <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="link-arrow" href="order.html">View all footwear</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand brand--light" href="index.html" aria-label="DE-DON SHOE PLC">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-light"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">DE-DON SHOE PLC</span>
+          <span class="brand__sub">Step With Confidence</span>
+        </span>
+      </a>
+      <p>Footwear manufacturing and sales. Designed, made and finished in Aba, Abia State, Nigeria.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Explore">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Collections">
+      <h4>Collections</h4>
+      <a href="order.html?category=Formal">Formal Shoes</a>
+      <a href="order.html?category=Loafers">Loafers</a>
+      <a href="order.html?category=Sandals">Sandals</a>
+      <a href="order.html?category=Palms">Palms</a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <p>Victory Line Shoe Plaza<br>Aba, Abia State, Nigeria</p>
+      <p><a href="https://wa.me/2347036257886" target="_blank" rel="noopener">0703 625 7886</a></p>
+      <p>Nationwide delivery across Nigeria.</p>
+      <a class="btn btn--outline-light btn--sm" href="https://wa.me/2347036257886" target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> DE-DON SHOE PLC. All rights reserved.</p>
+    <p>Crafted in Aba, Nigeria.</p>
+  </div>
+</footer>
+
+<script>
+/* year */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* header shadow on scroll */
+var header = document.getElementById("siteHeader");
+window.addEventListener("scroll", function(){
+  header.classList.toggle("is-scrolled", window.scrollY > 10);
+}, { passive:true });
+
+/* mobile nav */
+var toggle = document.getElementById("navToggle");
+var nav = document.getElementById("nav");
+var scrim = document.getElementById("navScrim");
+function setNav(open){
+  nav.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.style.overflow = open ? "hidden" : "";
+  scrim.hidden = !open;
+}
+toggle.addEventListener("click", function(){
+  setNav(!nav.classList.contains("is-open"));
+});
+scrim.addEventListener("click", function(){ setNav(false); });
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape") setNav(false);
+});
+nav.querySelectorAll("a").forEach(function(a){
+  a.addEventListener("click", function(){ setNav(false); });
+});
+
+/* reveal on scroll */
+var rev = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && rev.length){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add("is-in"); io.unobserve(en.target); }
+    });
+  }, { threshold:.1, rootMargin:"0px 0px -40px" });
+  rev.forEach(function(el){ io.observe(el); });
+} else {
+  rev.forEach(function(el){ el.classList.add("is-in"); });
+}
+</script>
+</body>
+</html>

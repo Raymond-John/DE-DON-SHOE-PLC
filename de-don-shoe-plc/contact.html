@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — DE-DON SHOE PLC</title>
+<meta name="description" content="Contact DE-DON SHOE PLC — Victory Line Shoe Plaza, Aba, Abia State. Send a message, find us on the map, follow us on social, or order directly on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#242424;
+  --milk:#F5F1E8;
+  --ink-75:rgba(36,36,36,.75);
+  --ink-55:rgba(36,36,36,.55);
+  --ink-40:rgba(36,36,36,.4);
+  --ink-30:rgba(36,36,36,.3);
+  --ink-20:rgba(36,36,36,.2);
+  --ink-12:rgba(36,36,36,.12);
+  --ink-05:rgba(36,36,36,.05);
+  --milk-70:rgba(245,241,232,.7);
+  --milk-50:rgba(245,241,232,.5);
+  --milk-30:rgba(245,241,232,.3);
+  --milk-15:rgba(245,241,232,.15);
+  --wa:#25D366;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;
+  color:var(--ink);background:var(--milk);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+p{margin:0 0 1.1em}
+::selection{background:var(--ink);color:var(--milk)}
+
+.container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1rem;font-size:.68rem;
+  letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--ink-75)}
+.eyebrow::before{content:"";flex:none;width:24px;height:1px;background:var(--ink-40)}
+.eyebrow--center{justify-content:center}
+.eyebrow--on-dark{color:var(--milk-70)}
+.eyebrow--on-dark::before{background:var(--milk-50)}
+.section{padding:clamp(52px,9vw,118px) 0}
+.section--tint{background:rgba(36,36,36,.045)}
+.section-title{font-size:clamp(1.6rem,4.2vw,3.4rem);font-weight:500;
+  color:var(--ink);overflow-wrap:break-word}
+.section-title em{font-style:italic}
+.section-title--light{color:var(--milk)}
+.section-head{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:flex-end;
+  justify-content:space-between;margin-bottom:clamp(1.8rem,5vw,4rem)}
+.section-head--center{justify-content:center;text-align:center}
+.lead{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink-75)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.95rem 1.9rem;font-size:.72rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;border:1px solid transparent;transition:all .3s var(--ease);
+  cursor:pointer;text-align:center;line-height:1.2;min-height:46px}
+.btn--primary{background:var(--ink);color:var(--milk);border-color:var(--ink)}
+.btn--primary:hover{background:transparent;color:var(--ink)}
+.btn--outline{border-color:var(--ink-30);color:var(--ink)}
+.btn--outline:hover{background:var(--ink);border-color:var(--ink);color:var(--milk)}
+.btn--outline-light{border-color:var(--milk-50);color:var(--milk)}
+.btn--outline-light:hover{background:var(--milk);border-color:var(--milk);color:var(--ink)}
+.btn--sm{padding:.7rem 1.3rem;font-size:.62rem;letter-spacing:.14em;min-height:42px}
+.btn--block{width:100%}
+.wa-icon{width:1.15em;height:1.15em;fill:var(--wa);flex:none;display:inline-block;pointer-events:none}
+.link-arrow{display:inline-flex;align-items:center;gap:.55rem;padding-bottom:.35rem;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  border-bottom:1px solid var(--ink-30);transition:.3s}
+.link-arrow::after{content:"\2192";transition:transform .3s}
+.link-arrow:hover{border-color:var(--ink)}
+.link-arrow:hover::after{transform:translateX(4px)}
+
+.brand{display:flex;align-items:center;
+  gap:clamp(.55rem,1.6vw,.95rem);min-width:0;text-decoration:none}
+.brand__mark{flex:none;width:clamp(42px,4.4vw,56px);
+  height:clamp(42px,4.4vw,56px);display:block}
+.brand__text{display:flex;flex-direction:column;min-width:0;line-height:1}
+.brand__name{font-family:var(--serif);font-weight:800;
+  font-size:clamp(1rem,2.8vw,1.45rem);letter-spacing:.03em;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{margin-top:.32rem;font-family:var(--sans);
+  font-size:clamp(.52rem,1.15vw,.66rem);font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--ink-55);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand--light .brand__name{color:var(--milk)}
+.brand--light .brand__sub{color:var(--milk-50)}
+
+.topbar{background:var(--ink);color:var(--milk-70);font-size:.6rem;
+  letter-spacing:.14em;text-transform:uppercase}
+.topbar__inner{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:.3rem .9rem;padding-block:.55rem;text-align:center}
+.topbar__sep{width:1px;height:10px;background:var(--milk-30)}
+@media (max-width:520px){
+  .topbar{font-size:.54rem;letter-spacing:.1em}
+  .topbar__sep{display:none}
+}
+
+.header{position:sticky;top:0;z-index:90;background:rgba(245,241,232,.97);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ink-12);transition:box-shadow .3s}
+.header.is-scrolled{box-shadow:0 10px 30px -18px rgba(36,36,36,.4)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;
+  gap:clamp(.4rem,2vw,1.5rem);padding-block:.65rem}
+.header__actions{display:flex;align-items:center;gap:.5rem;flex:none}
+.nav{display:flex;align-items:center;gap:1.5rem}
+.nav a{position:relative;padding-block:.3rem;font-size:.72rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--ink);transition:width .3s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{width:100%}
+.nav a[aria-current="page"]{font-weight:600}
+.nav__cta{display:none}
+.nav-toggle{display:none;width:44px;height:44px;flex-direction:column;
+  align-items:center;justify-content:center;gap:5px;flex:none}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);
+  transition:.3s var(--ease)}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-scrim{position:fixed;inset:0;z-index:80;background:rgba(36,36,36,.45);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+@media (max-width:560px){ .header__cta{display:none} }
+@media (max-width:1080px){
+  .nav{position:fixed;top:0;right:0;z-index:85;height:100dvh;width:min(340px,86vw);
+    flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;
+    padding:clamp(4.5rem,12vw,5.5rem) clamp(1.4rem,5vw,2.2rem) 2rem;
+    background:var(--milk);border-left:1px solid var(--ink-12);
+    transform:translateX(105%);transition:transform .4s var(--ease);
+    overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .nav.is-open{transform:none}
+  .nav a{font-size:.95rem;padding-block:.85rem;border-bottom:1px solid var(--ink-12)}
+  .nav a::after{display:none}
+  .nav a[aria-current="page"]{font-weight:600}
+  .nav__cta{display:inline-flex;margin-top:1.4rem;width:100%}
+  .nav-toggle{display:flex;z-index:86}
+}
+
+.page-head{position:relative;overflow:hidden;
+  padding:clamp(48px,10vw,118px) 0 clamp(36px,7vw,78px);
+  background:var(--ink);color:var(--milk)}
+.page-head::after{content:"";position:absolute;right:-90px;bottom:-140px;
+  width:420px;height:420px;border:1px solid var(--milk-15);
+  border-radius:50%;pointer-events:none}
+.page-head h1{font-size:clamp(1.8rem,6vw,4rem);font-weight:500;
+  position:relative;z-index:1;overflow-wrap:break-word;color:var(--milk)}
+.page-head h1 em{font-style:italic}
+.page-head p{max-width:60ch;margin-top:.9rem;color:var(--milk-70);
+  position:relative;z-index:1}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:.3rem .55rem;margin-bottom:1rem;
+  font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--milk-50)}
+.breadcrumb a{color:var(--milk-70)}
+.breadcrumb a:hover{color:var(--milk)}
+@media (max-width:520px){ .breadcrumb{font-size:.56rem;letter-spacing:.1em} }
+
+/* ============================================================
+   CLASSIC CONTACT FORM
+   ============================================================ */
+.contact-layout{
+  display:grid;grid-template-columns:1.15fr 1fr;
+  gap:clamp(2rem,5vw,4.5rem);align-items:start;
+}
+
+/* Form card */
+.form-card{
+  background:var(--milk);
+  border:1px solid var(--ink-12);
+  padding:clamp(1.6rem,4vw,2.8rem);
+}
+.form-card__head{
+  margin-bottom:1.6rem;padding-bottom:1.2rem;
+  border-bottom:1px solid var(--ink-12);
+}
+.form-card__head h2{
+  font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);
+  font-weight:500;margin-bottom:.35rem;
+}
+.form-card__head p{
+  margin:0;font-size:.9rem;color:var(--ink-75);
+}
+
+.form-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem 1.2rem;
+}
+.form-grid .field--full{grid-column:1/-1}
+
+.field{margin:0}
+.field label{
+  display:block;margin-bottom:.4rem;
+  font-size:.6rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-55);
+}
+.field label .req{color:var(--ink);font-weight:800}
+.field input,.field select,.field textarea{
+  width:100%;padding:.85rem 1rem;
+  border:1px solid var(--ink-20);
+  background:var(--milk);
+  font-family:inherit;font-size:16px;font-weight:300;
+  color:var(--ink);
+  transition:border-color .2s,background .2s;
+  border-radius:0;-webkit-appearance:none;appearance:none;
+}
+.field select{
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ink) 50%),
+    linear-gradient(-45deg, transparent 50%, var(--ink) 50%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 13px) 50%;
+  background-size:5px 5px, 5px 5px;
+  background-repeat:no-repeat;
+  padding-right:2.2rem;
+}
+.field input::placeholder,.field textarea::placeholder{
+  color:var(--ink-40);
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--ink);
+  background:rgba(36,36,36,.02);
+}
+.field textarea{min-height:140px;resize:vertical;line-height:1.6}
+
+.form-submit{
+  margin-top:1.4rem;
+  display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;
+}
+.form-submit .btn{flex:1;min-width:200px}
+.form-submit__note{
+  font-size:.72rem;color:var(--ink-55);margin:0;
+  line-height:1.5;
+}
+
+.form-foot{
+  margin-top:1.2rem;padding-top:1rem;
+  border-top:1px solid var(--ink-12);
+  display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;
+  align-items:center;justify-content:space-between;
+  font-size:.72rem;color:var(--ink-55);
+}
+.form-foot a{color:var(--ink);border-bottom:1px solid var(--ink-30)}
+.form-foot a:hover{border-color:var(--ink)}
+
+@media (max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+}
+
+/* Contact details column */
+.contact-details{min-width:0}
+.contact-details h2{
+  font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);
+  font-weight:500;margin-bottom:1rem;
+}
+.info-list{
+  display:grid;gap:1.2rem;margin:0 0 1.6rem;padding:0;list-style:none;
+}
+.info-list h4{
+  margin-bottom:.25rem;font-family:var(--sans);
+  font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55);
+}
+.info-list p{margin:0;color:var(--ink-75);font-size:.92rem}
+.info-list a{color:var(--ink);border-bottom:1px solid var(--ink-30)}
+.info-list a:hover{border-color:var(--ink)}
+
+/* Primary WhatsApp card */
+.wa-card{
+  padding:1.4rem 1.5rem;
+  background:var(--ink);
+  color:var(--milk);
+  margin-bottom:1.6rem;
+}
+.wa-card h3{
+  font-family:var(--serif);font-size:1.2rem;font-weight:500;
+  color:var(--milk);margin-bottom:.35rem;
+}
+.wa-card p{
+  margin:0 0 1rem;font-size:.88rem;color:var(--milk-70);
+  line-height:1.55;
+}
+.wa-card .btn{
+  background:var(--milk);color:var(--ink);border-color:var(--milk);
+  width:100%;
+}
+.wa-card .btn:hover{background:transparent;color:var(--milk)}
+
+/* Social */
+.social-block{
+  padding:1.4rem 1.5rem;
+  border:1px solid var(--ink-12);
+}
+.social-block h4{
+  margin:0 0 .35rem;font-family:var(--sans);
+  font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55);
+}
+.social-block p{
+  margin:0 0 1.1rem;font-size:.85rem;color:var(--ink-75);line-height:1.55;
+}
+.socials{
+  display:flex;gap:.6rem;flex-wrap:wrap;
+}
+.social-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:52px;height:52px;
+  border:1px solid var(--ink-20);
+  background:var(--milk);
+  color:var(--ink);
+  transition:all .3s var(--ease);
+}
+.social-btn:hover{
+  background:var(--ink);border-color:var(--ink);color:var(--milk);
+  transform:translateY(-2px);
+}
+.social-btn svg{
+  width:22px;height:22px;fill:currentColor;
+}
+
+@media (max-width:860px){
+  .contact-layout{grid-template-columns:1fr}
+}
+
+/* Map */
+.map-wrap{
+  border:1px solid var(--ink-12);overflow:hidden;
+  aspect-ratio:16/9;background:var(--ink-05);
+}
+.map-wrap iframe{display:block;width:100%;height:100%;border:0}
+@media (max-width:520px){ .map-wrap{aspect-ratio:4/3} }
+
+/* Workshop / machine section */
+.workshop-block{
+  display:grid;grid-template-columns:1.1fr 1fr;
+  gap:clamp(1.6rem,4vw,3.2rem);align-items:center;
+}
+.workshop-block__img{
+  position:relative;overflow:hidden;aspect-ratio:4/3;
+  background:var(--ink-05);border:1px solid var(--ink-12);
+}
+.workshop-block__img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .9s var(--ease);
+}
+.workshop-block__img:hover img{transform:scale(1.03)}
+.workshop-block__body{min-width:0}
+.machine-list{
+  display:grid;gap:.8rem;margin:1.4rem 0 0;padding:0;list-style:none;
+}
+.machine-list li{
+  padding:.9rem 1rem;border-left:2px solid var(--ink);
+  background:var(--ink-05);
+}
+.machine-list h4{
+  font-family:var(--sans);font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;margin-bottom:.2rem;
+}
+.machine-list p{margin:0;font-size:.85rem;color:var(--ink-75);line-height:1.55}
+@media (max-width:860px){
+  .workshop-block{grid-template-columns:1fr}
+  .workshop-block__img{aspect-ratio:16/10}
+}
+
+/* CTA band */
+.cta-band{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;
+  align-items:center;padding:clamp(1.4rem,5vw,3.2rem);
+  border:1px solid var(--ink-20)}
+.cta-band__actions{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+@media (max-width:860px){ .cta-band{grid-template-columns:1fr;gap:1.4rem} }
+@media (max-width:620px){
+  .cta-band__actions{width:100%;align-items:stretch}
+  .cta-band__actions .btn{width:100%}
+  .cta-band__actions .link-arrow{align-self:flex-start}
+}
+
+/* Footer */
+.footer{position:relative;padding-top:clamp(2.6rem,7vw,5.2rem);
+  background:var(--ink);color:var(--milk)}
+.footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--milk-30),transparent)}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;
+  gap:2rem;padding-bottom:2.2rem}
+.footer h4{margin-bottom:.9rem;font-family:var(--sans);font-size:.66rem;
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--milk-50)}
+.footer a,.footer p{display:block;margin:0 0 .5rem;font-size:.86rem;
+  color:var(--milk-70)}
+.footer a:hover{color:var(--milk)}
+.footer__brand p{max-width:34ch;margin-top:1rem}
+.footer__bottom{display:flex;flex-wrap:wrap;gap:.4rem 2rem;
+  justify-content:space-between;padding-block:1.1rem;
+  border-top:1px solid var(--milk-15);font-size:.7rem;color:var(--milk-50)}
+
+/* Social strip in footer */
+.footer-socials{
+  display:flex;gap:.5rem;margin-top:1rem;
+}
+.footer-socials a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;margin:0;
+  border:1px solid var(--milk-30);
+  color:var(--milk-70);
+  transition:all .3s var(--ease);
+}
+.footer-socials a:hover{
+  background:var(--milk);color:var(--ink);border-color:var(--milk);
+}
+.footer-socials svg{width:16px;height:16px;fill:currentColor}
+
+@media (max-width:980px){ .footer__grid{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){
+  .footer__grid{grid-template-columns:1fr;gap:1.6rem}
+  .footer__bottom{flex-direction:column;gap:.3rem;text-align:center}
+}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mark-dark" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#242424" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#242424" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#242424" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#242424"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#242424" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="mark-light" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#F5F1E8" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#F5F1E8"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#F5F1E8" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="wa-icon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </symbol>
+    <symbol id="fb-icon" viewBox="0 0 24 24">
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+    </symbol>
+    <symbol id="ig-icon" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+    </symbol>
+    <symbol id="tt-icon" viewBox="0 0 24 24">
+      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Handcrafted in Aba, Abia State</span>
+    <span class="topbar__sep" aria-hidden="true"></span>
+    <span>Nationwide delivery across Nigeria</span>
+  </div>
+</div>
+
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="DE-DON SHOE PLC — Home">
+      <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-dark"></use></svg>
+      <span class="brand__text">
+        <span class="brand__name">DE-DON SHOE PLC</span>
+        <span class="brand__sub">Step With Confidence</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav__cta btn btn--primary btn--sm" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm header__cta" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim" hidden></div>
+
+<main>
+
+  <!-- Page head -->
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Contact</span>
+      </div>
+      <h1>Get in <em>touch.</em></h1>
+      <p>Order directly on WhatsApp, send us a message using the form, or reach out on social media. We deliver nationwide across Nigeria.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT — form + details + social
+       ============================================================ -->
+  <section class="section">
+    <div class="container contact-layout">
+
+      <!-- LEFT: Classic form card -->
+      <div class="form-card reveal">
+        <div class="form-card__head">
+          <h2>Send us a message</h2>
+          <p>Fill in the form below and we'll get back to you on WhatsApp.</p>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="cName">Full Name <span class="req">*</span></label>
+              <input id="cName" name="name" type="text"
+                     placeholder="e.g. Adaeze Okafor"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="cEmail">Email Address <span class="req">*</span></label>
+              <input id="cEmail" name="email" type="email"
+                     placeholder="you@example.com"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="cPhone">Phone / WhatsApp <span class="req">*</span></label>
+              <input id="cPhone" name="phone" type="tel"
+                     placeholder="e.g. 0803 000 0000"
+                     autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="cSubject">Subject</label>
+              <select id="cSubject" name="subject">
+                <option value="">Choose a subject</option>
+                <option value="Order enquiry">Order enquiry</option>
+                <option value="Product question">Product question</option>
+                <option value="Sizing help">Sizing help</option>
+                <option value="Delivery question">Delivery question</option>
+                <option value="Wholesale / bulk order">Wholesale / bulk order</option>
+                <option value="Visit the workshop">Visit the workshop</option>
+                <option value="General message">General message</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="cStyle">Style of Interest <span style="color:var(--ink-40);font-weight:500;letter-spacing:.04em;text-transform:none;font-size:.75rem">(optional)</span></label>
+              <select id="cStyle" name="style">
+                <option value="">Select a style</option>
+                <option value="The Aba Oxford">The Aba Oxford</option>
+                <option value="Victory Line Derby">Victory Line Derby</option>
+                <option value="Classic Brogue">Classic Brogue</option>
+                <option value="Heritage Penny Loafer">Heritage Penny Loafer</option>
+                <option value="Tassel Loafer">Tassel Loafer</option>
+                <option value="Suede Loafer">Suede Loafer</option>
+                <option value="Braided Leather Sandal">Braided Leather Sandal</option>
+                <option value="Slingback Leather Sandal">Slingback Leather Sandal</option>
+                <option value="Single-Strap Leather Sandal">Single-Strap Leather Sandal</option>
+                <option value="Classic Palm Slipper">Classic Palm Slipper</option>
+                <option value="Woven Palm Slipper">Woven Palm Slipper</option>
+                <option value="Padded Palm Slipper">Padded Palm Slipper</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="cMsg">Your Message <span class="req">*</span></label>
+              <textarea id="cMsg" name="message"
+                        placeholder="Tell us your size, delivery city and any questions you have."
+                        required></textarea>
+            </div>
+
+          </div>
+
+          <div class="form-submit">
+            <button class="btn btn--primary" type="submit">
+              <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+              Send via WhatsApp
+            </button>
+            <p class="form-submit__note">
+              We reply on WhatsApp — usually within a few hours.
+            </p>
+          </div>
+
+          <div class="form-foot">
+            <span>Prefer to skip the form?</span>
+            <a href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20have%20a%20question." target="_blank" rel="noopener">
+              Message us directly on WhatsApp →
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: contact details + socials -->
+      <div class="contact-details reveal">
+
+        <!-- WhatsApp card -->
+        <div class="wa-card">
+          <h3>Order directly on WhatsApp</h3>
+          <p>The fastest way to reach us. Tell us the style, size and delivery location — we'll confirm everything in the chat.</p>
+          <a class="btn" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+            <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+
+        <!-- Contact details -->
+        <h2>Visit or call</h2>
+        <ul class="info-list">
+          <li>
+            <h4>Address</h4>
+            <p>Victory Line Shoe Plaza<br>Aba, Abia State, Nigeria</p>
+          </li>
+          <li>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/2347036257886" target="_blank" rel="noopener">0703 625 7886</a></p>
+          </li>
+          <li>
+            <h4>Delivery</h4>
+            <p>Nationwide delivery across Nigeria. Delivery details and cost are confirmed on WhatsApp before dispatch.</p>
+          </li>
+          <li>
+            <h4>Visiting</h4>
+            <p>If you're coming from out of town, message us on WhatsApp first and we'll guide you in.</p>
+          </li>
+        </ul>
+
+        <!-- Social media -->
+        <div class="social-block">
+          <h4>Follow Us</h4>
+          <p>New drops, workshop photos and updates — follow DE-DON SHOE PLC on social media.</p>
+          <div class="socials">
+            <a class="social-btn"
+               href="https://www.facebook.com/dedonshoeplc"
+               target="_blank" rel="noopener"
+               aria-label="DE-DON SHOE PLC on Facebook"
+               title="Facebook">
+              <svg aria-hidden="true"><use href="#fb-icon"></use></svg>
+            </a>
+            <a class="social-btn"
+               href="https://www.instagram.com/dedonshoeplc"
+               target="_blank" rel="noopener"
+               aria-label="DE-DON SHOE PLC on Instagram"
+               title="Instagram">
+              <svg aria-hidden="true"><use href="#ig-icon"></use></svg>
+            </a>
+            <a class="social-btn"
+               href="https://www.tiktok.com/@dedonshoeplc"
+               target="_blank" rel="noopener"
+               aria-label="DE-DON SHOE PLC on TikTok"
+               title="TikTok">
+              <svg aria-hidden="true"><use href="#tt-icon"></use></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="section section--tint" style="padding-top:0">
+    <div class="container" style="padding-top:clamp(52px,9vw,118px)">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Find Us</p>
+          <h2 class="section-title">On the <em>map.</em></h2>
+          <p class="lead" style="max-width:60ch">Victory Line Shoe Plaza, Aba, Abia State. If you're visiting from out of town, message us on WhatsApp first and we'll guide you in.</p>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=Aba,+Abia+State,+Nigeria&output=embed"
+                title="Map of Aba, Abia State"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inside our workshop (with machine image) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Inside Our Workshop</p>
+          <h2 class="section-title">The machines<br><em>behind each pair.</em></h2>
+          <p class="lead" style="max-width:60ch">A shoe is not just cut and shaped by hand — it goes through real machines. This is the equipment we work with in Aba.</p>
+        </div>
+      </div>
+
+      <div class="workshop-block">
+        <div class="workshop-block__img reveal">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80"
+               alt="Industrial sewing machine used for stitching leather shoe uppers"
+               loading="lazy" decoding="async">
+        </div>
+        <div class="workshop-block__body reveal">
+          <p class="lead">Our workshop runs on a small but essential set of machines. They don't replace the hands — they give the hands leverage, precision and consistency.</p>
+          <ul class="machine-list">
+            <li>
+              <h4>Sewing Machine</h4>
+              <p>Used to stitch leather uppers, aprons and linings together with waxed thread. Runs every day.</p>
+            </li>
+            <li>
+              <h4>Skiving Machine</h4>
+              <p>Thins the edges of leather so folds sit flat and seams are clean.</p>
+            </li>
+            <li>
+              <h4>Lasting Machine</h4>
+              <p>Pulls the upper over the last and shapes the final fit of the shoe.</p>
+            </li>
+            <li>
+              <h4>Finishing Tools</h4>
+              <p>Burnishing wheels and polishing brushes finish edges and soles before packing.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container cta-band reveal">
+      <div>
+        <p class="eyebrow">Ready to Order?</p>
+        <h2 class="section-title">Message us.<br><em>We'll reply on WhatsApp.</em></h2>
+        <p>Tell us the style, size and delivery location. Our team will confirm availability, price and delivery details with you directly.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+          <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+          Message Us Now
+        </a>
+        <a class="link-arrow" href="order.html">Browse the Collection</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand brand--light" href="index.html" aria-label="DE-DON SHOE PLC">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-light"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">DE-DON SHOE PLC</span>
+          <span class="brand__sub">Step With Confidence</span>
+        </span>
+      </a>
+      <p>Footwear manufacturing and sales. Designed, made and finished in Aba, Abia State, Nigeria.</p>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/dedonshoeplc" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg aria-hidden="true"><use href="#fb-icon"></use></svg>
+        </a>
+        <a href="https://www.instagram.com/dedonshoeplc" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg aria-hidden="true"><use href="#ig-icon"></use></svg>
+        </a>
+        <a href="https://www.tiktok.com/@dedonshoeplc" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg aria-hidden="true"><use href="#tt-icon"></use></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Explore">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Collections">
+      <h4>Collections</h4>
+      <a href="order.html?category=Formal">Formal Shoes</a>
+      <a href="order.html?category=Loafers">Loafers</a>
+      <a href="order.html?category=Sandals">Sandals</a>
+      <a href="order.html?category=Palms">Palms</a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <p>Victory Line Shoe Plaza<br>Aba, Abia State, Nigeria</p>
+      <p><a href="https://wa.me/2347036257886" target="_blank" rel="noopener">0703 625 7886</a></p>
+      <p>Nationwide delivery across Nigeria.</p>
+      <a class="btn btn--outline-light btn--sm" href="https://wa.me/2347036257886" target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> DE-DON SHOE PLC. All rights reserved.</p>
+    <p>Crafted in Aba, Nigeria.</p>
+  </div>
+</footer>
+
+<script>
+/* year */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* header shadow on scroll */
+var header = document.getElementById("siteHeader");
+window.addEventListener("scroll", function(){
+  header.classList.toggle("is-scrolled", window.scrollY > 10);
+}, { passive:true });
+
+/* mobile nav */
+var toggle = document.getElementById("navToggle");
+var nav = document.getElementById("nav");
+var scrim = document.getElementById("navScrim");
+function setNav(open){
+  nav.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.style.overflow = open ? "hidden" : "";
+  scrim.hidden = !open;
+}
+toggle.addEventListener("click", function(){
+  setNav(!nav.classList.contains("is-open"));
+});
+scrim.addEventListener("click", function(){ setNav(false); });
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape") setNav(false);
+});
+nav.querySelectorAll("a").forEach(function(a){
+  a.addEventListener("click", function(){ setNav(false); });
+});
+
+/* contact form → WhatsApp (uses location.href to avoid popup blockers) */
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name    = document.getElementById("cName").value.trim();
+  var email   = document.getElementById("cEmail").value.trim();
+  var phone   = document.getElementById("cPhone").value.trim();
+  var subject = document.getElementById("cSubject").value;
+  var style   = document.getElementById("cStyle").value;
+  var message = document.getElementById("cMsg").value.trim();
+
+  if (!name || !email || !phone || !message){
+    alert("Please fill in your name, email, phone and message.");
+    return;
+  }
+
+  var text = "Hello DE-DON SHOE PLC,\n\n" +
+    "New message from your website contact form:\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone: " + phone + "\n" +
+    (subject ? "Subject: " + subject + "\n" : "") +
+    (style   ? "Style of interest: " + style + "\n" : "") +
+    "\nMessage:\n" + message + "\n\n" +
+    "Thank you.";
+
+  window.location.href = "https://wa.me/2347036257886?text=" + encodeURIComponent(text);
+});
+
+/* reveal on scroll */
+var rev = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && rev.length){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add("is-in"); io.unobserve(en.target); }
+    });
+  }, { threshold:.1, rootMargin:"0px 0px -40px" });
+  rev.forEach(function(el){ io.observe(el); });
+} else {
+  rev.forEach(function(el){ el.classList.add("is-in"); });
+}
+</script>
+</body>
+</html>

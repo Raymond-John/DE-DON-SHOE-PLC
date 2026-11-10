@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing — DE-DON SHOE PLC</title>
+<meta name="description" content="How DE-DON SHOE PLC makes footwear in Aba — the materials we use, the machines that shape each pair, and the people who finish them by hand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#242424;
+  --milk:#F5F1E8;
+  --ink-75:rgba(36,36,36,.75);
+  --ink-55:rgba(36,36,36,.55);
+  --ink-40:rgba(36,36,36,.4);
+  --ink-30:rgba(36,36,36,.3);
+  --ink-20:rgba(36,36,36,.2);
+  --ink-12:rgba(36,36,36,.12);
+  --ink-05:rgba(36,36,36,.05);
+  --milk-70:rgba(245,241,232,.7);
+  --milk-50:rgba(245,241,232,.5);
+  --milk-30:rgba(245,241,232,.3);
+  --milk-15:rgba(245,241,232,.15);
+  --wa:#25D366;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;
+  color:var(--ink);background:var(--milk);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+p{margin:0 0 1.1em}
+::selection{background:var(--ink);color:var(--milk)}
+
+.container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1rem;font-size:.68rem;
+  letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--ink-75)}
+.eyebrow::before{content:"";flex:none;width:24px;height:1px;background:var(--ink-40)}
+.eyebrow--center{justify-content:center}
+.eyebrow--on-dark{color:var(--milk-70)}
+.eyebrow--on-dark::before{background:var(--milk-50)}
+.section{padding:clamp(52px,9vw,118px) 0}
+.section--tint{background:rgba(36,36,36,.045)}
+.section-title{font-size:clamp(1.6rem,4.2vw,3.4rem);font-weight:500;
+  color:var(--ink);overflow-wrap:break-word}
+.section-title em{font-style:italic}
+.section-title--light{color:var(--milk)}
+.section-head{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:flex-end;
+  justify-content:space-between;margin-bottom:clamp(1.8rem,5vw,4rem)}
+.section-head--center{justify-content:center;text-align:center}
+.lead{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink-75)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.95rem 1.9rem;font-size:.72rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;border:1px solid transparent;transition:all .3s var(--ease);
+  cursor:pointer;text-align:center;line-height:1.2;min-height:46px}
+.btn--primary{background:var(--ink);color:var(--milk);border-color:var(--ink)}
+.btn--primary:hover{background:transparent;color:var(--ink)}
+.btn--outline{border-color:var(--ink-30);color:var(--ink)}
+.btn--outline:hover{background:var(--ink);border-color:var(--ink);color:var(--milk)}
+.btn--outline-light{border-color:var(--milk-50);color:var(--milk)}
+.btn--outline-light:hover{background:var(--milk);border-color:var(--milk);color:var(--ink)}
+.btn--sm{padding:.7rem 1.3rem;font-size:.62rem;letter-spacing:.14em;min-height:42px}
+.wa-icon{width:1.15em;height:1.15em;fill:var(--wa);flex:none;display:inline-block;pointer-events:none}
+.link-arrow{display:inline-flex;align-items:center;gap:.55rem;padding-bottom:.35rem;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  border-bottom:1px solid var(--ink-30);transition:.3s}
+.link-arrow::after{content:"\2192";transition:transform .3s}
+.link-arrow:hover{border-color:var(--ink)}
+.link-arrow:hover::after{transform:translateX(4px)}
+
+.brand{display:flex;align-items:center;
+  gap:clamp(.55rem,1.6vw,.95rem);min-width:0;text-decoration:none}
+.brand__mark{flex:none;width:clamp(42px,4.4vw,56px);
+  height:clamp(42px,4.4vw,56px);display:block}
+.brand__text{display:flex;flex-direction:column;min-width:0;line-height:1}
+.brand__name{font-family:var(--serif);font-weight:800;
+  font-size:clamp(1rem,2.8vw,1.45rem);letter-spacing:.03em;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{margin-top:.32rem;font-family:var(--sans);
+  font-size:clamp(.52rem,1.15vw,.66rem);font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--ink-55);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand--light .brand__name{color:var(--milk)}
+.brand--light .brand__sub{color:var(--milk-50)}
+
+.topbar{background:var(--ink);color:var(--milk-70);font-size:.6rem;
+  letter-spacing:.14em;text-transform:uppercase}
+.topbar__inner{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:.3rem .9rem;padding-block:.55rem;text-align:center}
+.topbar__sep{width:1px;height:10px;background:var(--milk-30)}
+@media (max-width:520px){
+  .topbar{font-size:.54rem;letter-spacing:.1em}
+  .topbar__sep{display:none}
+}
+
+.header{position:sticky;top:0;z-index:90;background:rgba(245,241,232,.97);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ink-12);transition:box-shadow .3s}
+.header.is-scrolled{box-shadow:0 10px 30px -18px rgba(36,36,36,.4)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;
+  gap:clamp(.4rem,2vw,1.5rem);padding-block:.65rem}
+.header__actions{display:flex;align-items:center;gap:.5rem;flex:none}
+.nav{display:flex;align-items:center;gap:1.5rem}
+.nav a{position:relative;padding-block:.3rem;font-size:.72rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--ink);transition:width .3s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{width:100%}
+.nav a[aria-current="page"]{font-weight:600}
+.nav__cta{display:none}
+.nav-toggle{display:none;width:44px;height:44px;flex-direction:column;
+  align-items:center;justify-content:center;gap:5px;flex:none}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);
+  transition:.3s var(--ease)}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-scrim{position:fixed;inset:0;z-index:80;background:rgba(36,36,36,.45);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+@media (max-width:560px){ .header__cta{display:none} }
+@media (max-width:1080px){
+  .nav{position:fixed;top:0;right:0;z-index:85;height:100dvh;width:min(340px,86vw);
+    flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;
+    padding:clamp(4.5rem,12vw,5.5rem) clamp(1.4rem,5vw,2.2rem) 2rem;
+    background:var(--milk);border-left:1px solid var(--ink-12);
+    transform:translateX(105%);transition:transform .4s var(--ease);
+    overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .nav.is-open{transform:none}
+  .nav a{font-size:.95rem;padding-block:.85rem;border-bottom:1px solid var(--ink-12)}
+  .nav a::after{display:none}
+  .nav a[aria-current="page"]{font-weight:600}
+  .nav__cta{display:inline-flex;margin-top:1.4rem;width:100%}
+  .nav-toggle{display:flex;z-index:86}
+}
+
+.page-head{position:relative;overflow:hidden;
+  padding:clamp(48px,10vw,118px) 0 clamp(36px,7vw,78px);
+  background:var(--ink);color:var(--milk)}
+.page-head::after{content:"";position:absolute;right:-90px;bottom:-140px;
+  width:420px;height:420px;border:1px solid var(--milk-15);
+  border-radius:50%;pointer-events:none}
+.page-head h1{font-size:clamp(1.8rem,6vw,4rem);font-weight:500;
+  position:relative;z-index:1;overflow-wrap:break-word;color:var(--milk)}
+.page-head h1 em{font-style:italic}
+.page-head p{max-width:60ch;margin-top:.9rem;color:var(--milk-70);
+  position:relative;z-index:1}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:.3rem .55rem;margin-bottom:1rem;
+  font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--milk-50)}
+.breadcrumb a{color:var(--milk-70)}
+.breadcrumb a:hover{color:var(--milk)}
+@media (max-width:520px){ .breadcrumb{font-size:.56rem;letter-spacing:.1em} }
+
+/* Split */
+.split{display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(1.8rem,6vw,5rem);align-items:center}
+.figure{position:relative;margin:0;max-width:100%}
+.figure__img{position:relative;z-index:1;overflow:hidden;aspect-ratio:4/5}
+.figure__img img{width:100%;height:100%;object-fit:cover}
+.figure__frame{position:absolute;inset:18px -18px -18px 18px;z-index:0;
+  border:1px solid var(--ink-20)}
+@media (max-width:860px){
+  .split{grid-template-columns:1fr}
+  .figure{max-width:520px;width:100%}
+  .figure__frame{inset:12px -12px -12px 12px}
+}
+
+/* ====== HOW WE MAKE THEM (process steps) ====== */
+.process{display:grid;gap:0;margin-top:clamp(2rem,4vw,3rem)}
+.process-step{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2.4rem);
+  padding:clamp(1.4rem,3vw,2.4rem) 0;
+  border-top:1px solid var(--ink-12);
+}
+.process-step:last-child{border-bottom:1px solid var(--ink-12)}
+.process-step__num{
+  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);
+  line-height:1;color:var(--ink-55);font-weight:600;min-width:3rem;
+}
+.process-step__body h3{font-size:clamp(1.15rem,2.2vw,1.5rem);
+  margin-bottom:.5rem}
+.process-step__body p{margin:0 0 .6rem;max-width:68ch;color:var(--ink-75)}
+.process-step__body p:last-child{margin-bottom:0}
+@media (max-width:520px){
+  .process-step{gap:.6rem 1rem}
+  .process-step__num{font-size:1.35rem;min-width:2rem}
+}
+
+/* ====== MATERIALS ====== */
+.materials-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1rem,2.4vw,2rem);
+}
+.material-card{
+  background:var(--milk);
+  border:1px solid var(--ink-12);
+  padding:1.6rem;
+  display:flex;flex-direction:column;
+}
+.material-card__icon{
+  width:32px;height:32px;margin-bottom:1rem;
+  fill:none;stroke:var(--ink);
+  stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;
+}
+.material-card h3{font-size:1.2rem;margin-bottom:.5rem}
+.material-card p{color:var(--ink-75);font-size:.9rem;
+  margin:0;line-height:1.6;flex:1}
+.material-card__tag{
+  margin-top:1rem;padding-top:.9rem;
+  border-top:1px solid var(--ink-12);
+  font-size:.56rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-55);
+}
+@media (max-width:760px){ .materials-grid{grid-template-columns:1fr} }
+
+/* ====== MACHINE HERO BLOCK ====== */
+.machine-block{
+  display:grid;grid-template-columns:1.15fr 1fr;
+  gap:clamp(1.6rem,4vw,3.2rem);align-items:center;
+}
+.machine-block__img{
+  position:relative;overflow:hidden;aspect-ratio:4/3;
+  background:var(--ink-05);border:1px solid var(--ink-12);
+}
+.machine-block__img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1s var(--ease);
+}
+.machine-block__img:hover img{transform:scale(1.03)}
+.machine-block__img figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:.85rem 1rem;
+  background:linear-gradient(to top,rgba(15,15,15,.9),transparent);
+  color:var(--milk);font-size:.7rem;letter-spacing:.04em;
+}
+.machine-block__body{min-width:0}
+@media (max-width:860px){
+  .machine-block{grid-template-columns:1fr}
+  .machine-block__img{aspect-ratio:16/10}
+}
+
+/* ====== MACHINE LIST ====== */
+.machine-list{
+  display:grid;gap:.85rem;margin:1.4rem 0 0;padding:0;list-style:none;
+}
+.machine-list li{
+  padding:1rem 1.2rem;
+  border-left:2px solid var(--ink);
+  background:var(--ink-05);
+}
+.machine-list h4{
+  font-family:var(--sans);font-size:.64rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;margin-bottom:.3rem;
+}
+.machine-list p{margin:0;font-size:.88rem;color:var(--ink-75);line-height:1.55}
+
+/* ====== WORKSHOP GALLERY ====== */
+.workshop-gallery{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(.6rem,1.4vw,1rem);
+}
+.workshop-gallery figure{
+  margin:0;overflow:hidden;aspect-ratio:4/5;position:relative;
+}
+.workshop-gallery img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .9s var(--ease);
+}
+.workshop-gallery figure:hover img{transform:scale(1.05)}
+.workshop-gallery figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:.9rem 1rem;
+  background:linear-gradient(to top,rgba(15,15,15,.9),transparent);
+  color:var(--milk);font-size:.72rem;letter-spacing:.04em;
+}
+@media (max-width:720px){
+  .workshop-gallery{grid-template-columns:1fr 1fr}
+  .workshop-gallery figure:first-child{grid-column:1/-1;aspect-ratio:16/9}
+}
+
+/* CTA band */
+.cta-band{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;
+  align-items:center;padding:clamp(1.4rem,5vw,3.2rem);
+  border:1px solid var(--ink-20)}
+.cta-band__actions{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+@media (max-width:860px){ .cta-band{grid-template-columns:1fr;gap:1.4rem} }
+@media (max-width:620px){
+  .cta-band__actions{width:100%;align-items:stretch}
+  .cta-band__actions .btn{width:100%}
+  .cta-band__actions .link-arrow{align-self:flex-start}
+}
+
+/* Footer */
+.footer{position:relative;padding-top:clamp(2.6rem,7vw,5.2rem);
+  background:var(--ink);color:var(--milk)}
+.footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--milk-30),transparent)}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;
+  gap:2rem;padding-bottom:2.2rem}
+.footer h4{margin-bottom:.9rem;font-family:var(--sans);font-size:.66rem;
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--milk-50)}
+.footer a,.footer p{display:block;margin:0 0 .5rem;font-size:.86rem;
+  color:var(--milk-70)}
+.footer a:hover{color:var(--milk)}
+.footer__brand p{max-width:34ch;margin-top:1rem}
+.footer__bottom{display:flex;flex-wrap:wrap;gap:.4rem 2rem;
+  justify-content:space-between;padding-block:1.1rem;
+  border-top:1px solid var(--milk-15);font-size:.7rem;color:var(--milk-50)}
+@media (max-width:980px){ .footer__grid{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){
+  .footer__grid{grid-template-columns:1fr;gap:1.6rem}
+  .footer__bottom{flex-direction:column;gap:.3rem;text-align:center}
+}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mark-dark" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#242424" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#242424" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#242424" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#242424"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#242424" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="mark-light" viewBox="0 0 100 100">
+      <path d="M8 16 H26 Q54 16 54 50 Q54 84 26 84 H8 Z"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M30 19 H48 Q72 19 72 50 Q72 81 48 81 H30 Z"
+            fill="none" stroke="#F5F1E8" stroke-opacity=".55" stroke-width="5.4" stroke-linejoin="round"/>
+      <path d="M62 26 Q76 22 82 32 Q86 41 74 45 Q60 48 60 59 Q60 71 74 73 Q86 75 90 63"
+            fill="none" stroke="#F5F1E8" stroke-width="5.4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74 68 Q82 64 92 66 Q99 68 99 74 Q99 79 92 80 L78 81 L73 75 Z"
+            fill="#F5F1E8"/>
+      <path d="M6 89 Q50 96 94 87"
+            fill="none" stroke="#F5F1E8" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="wa-icon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>Handcrafted in Aba, Abia State</span>
+    <span class="topbar__sep" aria-hidden="true"></span>
+    <span>Nationwide delivery across Nigeria</span>
+  </div>
+</div>
+
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="DE-DON SHOE PLC — Home">
+      <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-dark"></use></svg>
+      <span class="brand__text">
+        <span class="brand__name">DE-DON SHOE PLC</span>
+        <span class="brand__sub">Step With Confidence</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html" aria-current="page">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav__cta btn btn--primary btn--sm" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm header__cta" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        Order on WhatsApp
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim" hidden></div>
+
+<main>
+
+  <!-- Page head -->
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Manufacturing</span>
+      </div>
+      <h1>How Our Shoes <em>Are Made</em></h1>
+      <p>From leather to last, every DE-DON SHOE PLC pair goes through the same careful process — quality materials, the right machines, and hands that know the work.</p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       HOW THE SHOES ARE MANUFACTURED — 5-step process
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The Process</p>
+          <h2 class="section-title">Leather to last,<br><em>step by step.</em></h2>
+          <p class="lead" style="max-width:60ch">Every pair we make follows the same five-stage process. No shortcuts. No skipped steps. This is how a DE-DON SHOE PLC shoe comes together in our Aba workshop.</p>
+        </div>
+      </div>
+
+      <div class="process">
+
+        <div class="process-step reveal">
+          <span class="process-step__num">01</span>
+          <div class="process-step__body">
+            <h3>Selection</h3>
+            <p>We inspect every hide by hand before it enters the workshop. Grain, thickness and consistency are checked. Hides that don't meet our standard are set aside — they never make it into a finished shoe.</p>
+            <p>This is where the shoe is either going to be good, or it isn't. We don't move forward until the leather is right.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <span class="process-step__num">02</span>
+          <div class="process-step__body">
+            <h3>Cutting</h3>
+            <p>Patterns are laid out on the hide and cut by hand. Every size, every component — the vamp, quarters, toe cap — is cut to a specific shape for a specific size.</p>
+            <p>Precision at this stage decides how the finished shoe sits, wears and lasts. A careless cut shows up months later in the fit.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <span class="process-step__num">03</span>
+          <div class="process-step__body">
+            <h3>Stitching</h3>
+            <p>The cut pieces are joined together on a stitching machine. Uppers, aprons, linings and any detailing — brogue perforation, tassels, decorative stitching — are assembled in the right order.</p>
+            <p>Waxed thread, close attention to alignment, and a steady hand at the machine. This is where the shoe begins to look like a shoe.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <span class="process-step__num">04</span>
+          <div class="process-step__body">
+            <h3>Lasting</h3>
+            <p>The stitched upper is pulled over the last — a solid wooden or plastic form that shapes the shoe to its final size and fit. Lasting is what gives a shoe its structure.</p>
+            <p>Once on the last, the upper is shaped, tightened and set. The sole is attached during this stage, either stitched or cemented depending on the style.</p>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <span class="process-step__num">05</span>
+          <div class="process-step__body">
+            <h3>Finishing</h3>
+            <p>Edges are burnished. Soles are polished. The upper is cleaned, waxed and buffed. Any lining or interior detail is checked. The shoe is inspected against our standard before it's cleared for packing.</p>
+            <p>Only then does it get wrapped and prepared for delivery to you.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       QUALITY MATERIALS USED
+       ===================================================== -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The Materials</p>
+          <h2 class="section-title">Quality,<br><em>chosen up front.</em></h2>
+          <p class="lead" style="max-width:60ch">A shoe is only as good as what goes into it. We choose every material for how it wears — not just how it looks on day one.</p>
+        </div>
+      </div>
+
+      <div class="materials-grid">
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6l8-3 8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9z"/>
+          </svg>
+          <h3>Full-Grain Leather</h3>
+          <p>The upper of every formal shoe, loafer and palm is cut from inspected hides — chosen for grain, feel and durability. This is the strongest part of the hide and it takes polish beautifully.</p>
+          <span class="material-card__tag">Used on · Uppers, straps</span>
+        </div>
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 17c3 0 5-2 8-2s5 2 8 2M6 13l1-5 4 2 3-4 3 5"/>
+          </svg>
+          <h3>Stitched Leather Soles</h3>
+          <p>Our soles are stitched, not just glued. The stitch adds structural integrity and gives the shoe a longer working life. Glue gives up; stitch holds.</p>
+          <span class="material-card__tag">Used on · Formal, loafers</span>
+        </div>
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6l8-3 8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9z"/>
+          </svg>
+          <h3>Waxed Threads</h3>
+          <p>Strong, waxed threads hold under load. Stitching is a structural decision, not just a visual one — the thread is chosen for how it holds up over months and years of wear.</p>
+          <span class="material-card__tag">Used on · Every pair</span>
+        </div>
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/>
+          </svg>
+          <h3>Rubber &amp; Leather Soles</h3>
+          <p>Leather soles for formal and loafers, cushioned rubber for palms, sandals and slides. The sole is chosen to suit the shoe — not the other way around.</p>
+          <span class="material-card__tag">Used on · Palms, sandals, slides</span>
+        </div>
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/>
+          </svg>
+          <h3>Soft Suede</h3>
+          <p>Our suede loafers use soft-brushed leather for a relaxed fit. Comfortable from day one, with a matte finish that ages well.</p>
+          <span class="material-card__tag">Used on · Suede loafers</span>
+        </div>
+
+        <div class="material-card reveal">
+          <svg class="material-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6l8-3 8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9z"/>
+          </svg>
+          <h3>Padded Footbeds</h3>
+          <p>Sandals and palms are built on cushioned footbeds so the shoe feels right from the first step. Light, breathable, and shaped for the climate.</p>
+          <span class="material-card__tag">Used on · Palms, sandals</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       THE MACHINE USED — hero image + list
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The Machines</p>
+          <h2 class="section-title">The tools<br><em>behind each pair.</em></h2>
+          <p class="lead" style="max-width:60ch">A shoe is not just cut and shaped by hand — it goes through real machines. This is the equipment we work with in Aba, and what each one does.</p>
+        </div>
+      </div>
+
+      <div class="machine-block reveal">
+        <figure class="machine-block__img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80"
+               alt="Industrial sewing machine used for stitching leather shoe uppers"
+               loading="lazy" decoding="async">
+          <figcaption>Industrial sewing machine — stitching the upper</figcaption>
+        </figure>
+        <div class="machine-block__body">
+          <p class="lead">Our workshop runs on a small but essential set of machines. They don't replace the hands — they give the hands leverage, precision and consistency.</p>
+          <p>Every pair that leaves our workshop has been through at least three of these — most go through all four.</p>
+          <ul class="machine-list">
+            <li>
+              <h4>Sewing Machine</h4>
+              <p>Stitches leather uppers, aprons, linings and detailing together with waxed thread. The most-used machine in the workshop — runs every day.</p>
+            </li>
+            <li>
+              <h4>Skiving Machine</h4>
+              <p>Thins the edges of leather so folds sit flat and seams are clean. Without it, stitched leather would bulge where it overlaps.</p>
+            </li>
+            <li>
+              <h4>Lasting Machine</h4>
+              <p>Pulls the upper over the last and shapes the final fit of the shoe. The footbed and sole are attached after this stage.</p>
+            </li>
+            <li>
+              <h4>Finishing Tools</h4>
+              <p>Burnishing wheels, edge irons and polishing brushes finish edges and soles before packing. This is where the shoe gets its final look.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       IN THE WORKSHOP — people making shoes
+       ===================================================== -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">In the Workshop</p>
+          <h2 class="section-title">Made by <em>people.</em></h2>
+          <p class="lead" style="max-width:60ch">Every pair passes through the hands of a maker. These are real workshop scenes — cutting, stitching, shaping, finishing.</p>
+        </div>
+      </div>
+
+      <div class="workshop-gallery">
+        <figure class="reveal">
+          <img src="https://unsplash.com/photos/V7T7_A0FIIY/download?w=900"
+               alt="Man sewing leather at a workbench"
+               loading="lazy" decoding="async">
+          <figcaption>Stitching the upper</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://unsplash.com/photos/9wNcZprwco8/download?w=900"
+               alt="Person operating a leather stitching tool"
+               loading="lazy" decoding="async">
+          <figcaption>Working the leather</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://unsplash.com/photos/TCZcUc3zHrM/download?w=900"
+               alt="Shoe shiner polishing a leather shoe"
+               loading="lazy" decoding="async">
+          <figcaption>Finishing and polishing</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="https://unsplash.com/photos/JynUFLb77N8/download?w=900"
+               alt="Leather crafter's workbench with tools"
+               loading="lazy" decoding="async">
+          <figcaption>The workbench</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container cta-band reveal">
+      <div>
+        <p class="eyebrow">See the Result</p>
+        <h2 class="section-title">A shoe with a <em>maker.</em></h2>
+        <p>Browse the finished collection, or message us directly to order.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+          <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="link-arrow" href="order.html">See the Finished Shoes</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand brand--light" href="index.html" aria-label="DE-DON SHOE PLC">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#mark-light"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">DE-DON SHOE PLC</span>
+          <span class="brand__sub">Step With Confidence</span>
+        </span>
+      </a>
+      <p>Footwear manufacturing and sales. Designed, made and finished in Aba, Abia State, Nigeria.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Explore">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Collections">
+      <h4>Collections</h4>
+      <a href="order.html?category=Formal">Formal Shoes</a>
+      <a href="order.html?category=Loafers">Loafers</a>
+      <a href="order.html?category=Sandals">Sandals</a>
+      <a href="order.html?category=Palms">Palms</a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <p>Victory Line Shoe Plaza<br>Aba, Abia State, Nigeria</p>
+      <p><a href="https://wa.me/2347036257886" target="_blank" rel="noopener">0703 625 7886</a></p>
+      <p>Nationwide delivery across Nigeria.</p>
+      <a class="btn btn--outline-light btn--sm" href="https://wa.me/2347036257886" target="_blank" rel="noopener">
+        <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> DE-DON SHOE PLC. All rights reserved.</p>
+    <p>Crafted in Aba, Nigeria.</p>
+  </div>
+</footer>
+
+<script>
+/* year */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* header shadow on scroll */
+var header = document.getElementById("siteHeader");
+window.addEventListener("scroll", function(){
+  header.classList.toggle("is-scrolled", window.scrollY > 10);
+}, { passive:true });
+
+/* mobile nav */
+var toggle = document.getElementById("navToggle");
+var nav = document.getElementById("nav");
+var scrim = document.getElementById("navScrim");
+function setNav(open){
+  nav.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.style.overflow = open ? "hidden" : "";
+  scrim.hidden = !open;
+}
+toggle.addEventListener("click", function(){
+  setNav(!nav.classList.contains("is-open"));
+});
+scrim.addEventListener("click", function(){ setNav(false); });
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape") setNav(false);
+});
+nav.querySelectorAll("a").forEach(function(a){
+  a.addEventListener("click", function(){ setNav(false); });
+});
+
+/* reveal on scroll */
+var rev = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && rev.length){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add("is-in"); io.unobserve(en.target); }
+    });
+  }, { threshold:.1, rootMargin:"0px 0px -40px" });
+  rev.forEach(function(el){ io.observe(el); });
+} else {
+  rev.forEach(function(el){ el.classList.add("is-in"); });
+}
+</script>
+</body>
+</html>
