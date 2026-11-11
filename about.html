@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Collections — DE-DON SHOE PLC</title>
-<meta name="description" content="Browse the DE-DON SHOE PLC collections — formal shoes, loafers, sandals and palms. Hand-finished in Aba, Abia State.">
+<title>About Us — DE-DON SHOE PLC</title>
+<meta name="description" content="DE-DON SHOE PLC is a footwear manufacturer based at Victory Line Shoe Plaza, Aba, Abia State, Nigeria. We design, make and sell premium leather footwear for customers across Nigeria.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -45,10 +45,14 @@ p{margin:0 0 1.1em}
   letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--ink-75)}
 .eyebrow::before{content:"";flex:none;width:24px;height:1px;background:var(--ink-40)}
 .eyebrow--center{justify-content:center}
+.eyebrow--on-dark{color:var(--milk-70)}
+.eyebrow--on-dark::before{background:var(--milk-50)}
 .section{padding:clamp(52px,9vw,118px) 0}
+.section--tint{background:rgba(36,36,36,.045)}
 .section-title{font-size:clamp(1.6rem,4.2vw,3.4rem);font-weight:500;
   color:var(--ink);overflow-wrap:break-word}
 .section-title em{font-style:italic}
+.section-title--light{color:var(--milk)}
 .section-head{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:flex-end;
   justify-content:space-between;margin-bottom:clamp(1.8rem,5vw,4rem)}
 .section-head--center{justify-content:center;text-align:center}
@@ -62,6 +66,8 @@ p{margin:0 0 1.1em}
 .btn--primary:hover{background:transparent;color:var(--ink)}
 .btn--outline{border-color:var(--ink-30);color:var(--ink)}
 .btn--outline:hover{background:var(--ink);border-color:var(--ink);color:var(--milk)}
+.btn--outline-light{border-color:var(--milk-50);color:var(--milk)}
+.btn--outline-light:hover{background:var(--milk);border-color:var(--milk);color:var(--ink)}
 .btn--sm{padding:.7rem 1.3rem;font-size:.62rem;letter-spacing:.14em;min-height:42px}
 .wa-icon{width:1.15em;height:1.15em;fill:var(--wa);flex:none;display:inline-block;pointer-events:none}
 .link-arrow{display:inline-flex;align-items:center;gap:.55rem;padding-bottom:.35rem;
@@ -76,17 +82,13 @@ p{margin:0 0 1.1em}
 .brand__mark{flex:none;width:clamp(42px,4.4vw,56px);
   height:clamp(42px,4.4vw,56px);display:block}
 .brand__text{display:flex;flex-direction:column;min-width:0;line-height:1}
-.brand__name{
-  font-family:var(--serif);font-weight:800;
+.brand__name{font-family:var(--serif);font-weight:800;
   font-size:clamp(1rem,2.8vw,1.45rem);letter-spacing:.03em;color:var(--ink);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.brand__sub{
-  margin-top:.32rem;font-family:var(--sans);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand__sub{margin-top:.32rem;font-family:var(--sans);
   font-size:clamp(.52rem,1.15vw,.66rem);font-weight:700;
   letter-spacing:.24em;text-transform:uppercase;color:var(--ink-55);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand--light .brand__name{color:var(--milk)}
 .brand--light .brand__sub{color:var(--milk-50)}
 
@@ -158,66 +160,49 @@ p{margin:0 0 1.1em}
 .breadcrumb a:hover{color:var(--milk)}
 @media (max-width:520px){ .breadcrumb{font-size:.56rem;letter-spacing:.1em} }
 
-/* Collections list — large cards */
-.collection-list{display:grid;grid-template-columns:1fr 1fr;
-  gap:clamp(1rem,2.4vw,2rem)}
-.collection{
-  position:relative;display:flex;align-items:flex-end;overflow:hidden;
-  aspect-ratio:4/3;background:var(--ink);
-}
-.collection img{position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;opacity:.82;
-  transition:transform .9s var(--ease),opacity .5s}
-.collection::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(15,15,15,.94),rgba(36,36,36,.1) 70%)}
-.collection:hover img{transform:scale(1.05);opacity:.95}
-.collection__body{position:relative;z-index:2;
-  padding:clamp(1.2rem,2.6vw,2rem);color:var(--milk);min-width:0}
-.collection__body span{font-size:.58rem;font-weight:700;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--milk-70)}
-.collection__body h3{margin:.4rem 0 0;
-  font-size:clamp(1.2rem,2.4vw,1.9rem);color:var(--milk);overflow-wrap:break-word}
-.collection__body p{margin:.5rem 0 0;font-size:.88rem;
-  color:var(--milk-70);line-height:1.55}
-.collection__body .link-arrow{
-  margin-top:1.2rem;color:var(--milk);border-color:var(--milk-50);
-}
-.collection__body .link-arrow:hover{border-color:var(--milk)}
-@media (max-width:720px){
-  .collection-list{grid-template-columns:1fr}
-  .collection{aspect-ratio:16/11}
+.split{display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(1.8rem,6vw,5rem);align-items:center}
+.figure{position:relative;margin:0;max-width:100%}
+.figure__img{position:relative;z-index:1;overflow:hidden;aspect-ratio:4/5}
+.figure__img img{width:100%;height:100%;object-fit:cover}
+.figure__frame{position:absolute;inset:18px -18px -18px 18px;z-index:0;
+  border:1px solid var(--ink-20)}
+@media (max-width:860px){
+  .split{grid-template-columns:1fr}
+  .figure{max-width:520px;width:100%}
+  .figure__frame{inset:12px -12px -12px 12px}
 }
 
-/* Collection showcase gallery */
-.showcase-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:clamp(.6rem,1.6vw,1.2rem);
+.location-block{
+  display:grid;grid-template-columns:1fr 1.1fr;
+  gap:clamp(1.6rem,4vw,3.2rem);align-items:stretch;
 }
-.showcase-item{
-  position:relative;overflow:hidden;background:var(--ink-05);
-  aspect-ratio:4/5;
+.location-block__info{display:flex;flex-direction:column;justify-content:center}
+.info-list{display:grid;gap:1.3rem;margin:0;padding:0;list-style:none}
+.info-list h4{margin-bottom:.25rem;font-family:var(--sans);font-size:.64rem;
+  font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55)}
+.info-list p{margin:0;color:var(--ink-75)}
+.info-list a{color:var(--ink);border-bottom:1px solid var(--ink-30)}
+.info-list a:hover{border-color:var(--ink)}
+
+.map-wrap{
+  border:1px solid var(--ink-12);overflow:hidden;
+  aspect-ratio:4/5;background:var(--ink-05);
 }
-.showcase-item img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .8s var(--ease);
-}
-.showcase-item:hover img{transform:scale(1.06)}
-.showcase-item figcaption{
-  position:absolute;left:0;right:0;bottom:0;
-  padding:.7rem .8rem;
-  background:linear-gradient(to top,rgba(15,15,15,.9),transparent);
-  color:var(--milk);
-  font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-}
-@media (max-width:1080px){
-  .showcase-grid{grid-template-columns:repeat(4,1fr)}
-}
-@media (max-width:760px){
-  .showcase-grid{grid-template-columns:repeat(2,1fr)}
+.map-wrap iframe{display:block;width:100%;height:100%;border:0}
+
+@media (max-width:860px){
+  .location-block{grid-template-columns:1fr}
+  .map-wrap{aspect-ratio:16/10}
 }
 
-/* CTA band */
+.values{display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1.1rem,3vw,2.4rem)}
+.value{padding-top:1.2rem;border-top:1px solid var(--ink-12)}
+.value h3{margin-bottom:.45rem;font-size:clamp(1.1rem,2vw,1.3rem)}
+.value p{margin:0;font-size:.9rem;color:var(--ink-75)}
+@media (max-width:760px){ .values{grid-template-columns:1fr} }
+
 .cta-band{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;
   align-items:center;padding:clamp(1.4rem,5vw,3.2rem);
   border:1px solid var(--ink-20)}
@@ -229,7 +214,6 @@ p{margin:0 0 1.1em}
   .cta-band__actions .link-arrow{align-self:flex-start}
 }
 
-/* Footer */
 .footer{position:relative;padding-top:clamp(2.6rem,7vw,5.2rem);
   background:var(--ink);color:var(--milk)}
 .footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
@@ -251,7 +235,6 @@ p{margin:0 0 1.1em}
   .footer__bottom{flex-direction:column;gap:.3rem;text-align:center}
 }
 
-/* Reveal */
 .reveal{opacity:0;transform:translateY(16px);
   transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.is-in{opacity:1;transform:none}
@@ -317,8 +300,8 @@ p{margin:0 0 1.1em}
 
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="collections.html" aria-current="page">Collections</a>
-      <a href="about.html">About Us</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html" aria-current="page">About Us</a>
       <a href="order.html">Order</a>
       <a href="manufacturing.html">Manufacturing</a>
       <a href="contact.html">Contact</a>
@@ -346,157 +329,107 @@ p{margin:0 0 1.1em}
   <section class="page-head">
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a><span>/</span><span>Collections</span>
+        <a href="index.html">Home</a><span>/</span><span>About Us</span>
       </div>
-      <h1>Our <em>Collections</em></h1>
-      <p>Four distinct families of footwear — formal shoes, loafers, sandals and palms. All hand-finished in our Aba workshop.</p>
+      <h1>About <em>DE-DON SHOE PLC</em></h1>
+      <p>A footwear manufacturing and sales company rooted in Aba, Abia State — built on craftsmanship, consistency and a belief that Nigerian-made shoes can stand with the best.</p>
     </div>
   </section>
 
-  <!-- Large collection entry cards -->
   <section class="section">
-    <div class="container">
-      <div class="collection-list">
-
-        <a class="collection reveal" href="order.html?category=Formal">
-          <img src="../img/shoe 3.webp"
-               alt="Formal leather Oxford shoes"
-               loading="lazy" decoding="async">
-          <div class="collection__body">
-            <span>3 Styles</span>
-            <h3>Formal Shoes</h3>
-            <p>Closed and open-lace formals, built on a proper last with stitched leather soles. For the office, the occasion, the everyday that deserves better than average.</p>
-            <span class="link-arrow">Browse Collection</span>
-          </div>
-        </a>
-
-        <a class="collection reveal" href="order.html?category=Loafers">
-          <img src="../img/shoe4.webp"
-               alt="Leather penny loafers"
-               loading="lazy" decoding="async">
-          <div class="collection__body">
-            <span>3 Styles</span>
-            <h3>Loafers</h3>
-            <p>Slip-on comfort without losing the sharpness. Penny, tassel and suede loafers — cut and finished by hand in our Aba workshop.</p>
-            <span class="link-arrow">Browse Collection</span>
-          </div>
-        </a>
-
-        <a class="collection reveal" href="order.html?category=Sandals">
-          <img src="../img/sandals3.webp"
-               alt="Braided leather sandals"
-               loading="lazy" decoding="async">
-          <div class="collection__body">
-            <span>3 Styles</span>
-            <h3>Sandals</h3>
-            <p>Braided and slingback leather sandals, built for warm days and long wear. Contoured footbeds, hand-worked straps.</p>
-            <span class="link-arrow">Browse Collection</span>
-          </div>
-        </a>
-
-        <a class="collection reveal" href="order.html?category=Palms">
-          <img src="../img/palm3.avif"
-               alt="Leather palm slippers"
-               loading="lazy" decoding="async">
-          <div class="collection__body">
-            <span>3 Styles</span>
-            <h3>Palms</h3>
-            <p>The palm slipper is a Nigerian staple. Ours are leather — single-band or woven, hand-finished. Light, breathable, and made for the climate.</p>
-            <span class="link-arrow">Browse Collection</span>
-          </div>
-        </a>
-
+    <div class="container split">
+      <div class="split__body reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="section-title">We make shoes.<br><em>That is the work.</em></h2>
+        <p class="lead">DE-DON SHOE PLC is based at Victory Line Shoe Plaza, Aba, Abia State. We design, manufacture and sell footwear directly to customers across Nigeria.</p>
+        <p>Every pair begins with a pattern and a cut of leather. From there, it moves through stitching, lasting and finishing — steps carried out by people who understand that a shoe is only as good as its construction.</p>
+        <p>We do not claim a long history, awards or certifications we do not have. What we offer is straightforward: considered footwear, made in Aba, sold directly to you.</p>
+        <a class="btn btn--outline" href="collections.html">Browse the Collection</a>
       </div>
+      <figure class="figure reveal">
+        <div class="figure__img">
+          <img src="img/shoe4.webp"
+               alt="Leather shoe construction detail"
+               loading="lazy" decoding="async">
+        </div>
+        <span class="figure__frame" aria-hidden="true"></span>
+      </figure>
     </div>
   </section>
 
-  <!-- Collection Showcase — 10 real product images -->
-  <section class="section" style="padding-top:0">
+  <section class="section section--tint">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--center">
         <div>
-          <p class="eyebrow">Collection Showcase</p>
-          <h2 class="section-title">Ten pieces,<br><em>four families.</em></h2>
-          <p class="lead" style="max-width:56ch">A closer look at the footwear we make — formal shoes, loafers, sandals and palms. Each image matches the collection it belongs to.</p>
+          <p class="eyebrow eyebrow--center">Where We Are</p>
+          <h2 class="section-title">Find us in <em>Aba.</em></h2>
         </div>
       </div>
 
-      <div class="showcase-grid">
+      <div class="location-block">
+        <div class="location-block__info reveal">
+          <p class="lead">Victory Line Shoe Plaza sits at the heart of Aba's footwear trade — a cluster of workshops, makers and sellers that has shaped Nigerian leatherwork for decades.</p>
+          <p>Our workshop is here. Customers can visit, see the work in progress, and speak directly to the people who make the shoes.</p>
+          <ul class="info-list" style="margin-top:1.4rem">
+            <li>
+              <h4>Address</h4>
+              <p>Victory Line Shoe Plaza<br>Aba, Abia State, Nigeria</p>
+            </li>
+            <li>
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/2347036257886" target="_blank" rel="noopener">0703 625 7886</a></p>
+            </li>
+            <li>
+              <h4>Delivery</h4>
+              <p>Nationwide across Nigeria. Delivery details and cost are confirmed on WhatsApp before dispatch.</p>
+            </li>
+            <li>
+              <h4>Visiting</h4>
+              <p>If you're coming from out of town, message us on WhatsApp first and we'll guide you in.</p>
+            </li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem">
+            <a class="btn btn--primary" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20to%20visit%20your%20workshop%20in%20Aba." target="_blank" rel="noopener">
+              <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
+              Message Us First
+            </a>
+            <a class="btn btn--outline" href="contact.html">Contact &amp; Directions</a>
+          </div>
+        </div>
 
-        <!-- Formal Shoes -->
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe5.jpg"
-               alt="Formal leather Oxford shoe"
-               loading="lazy" decoding="async">
-          <figcaption>Formal · Oxford</figcaption>
-        </figure>
+        <div class="map-wrap reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Aba,+Abia+State,+Nigeria&output=embed"
+            title="Map of Aba, Abia State"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe 3.webp"
-               alt="Formal leather Derby shoe"
-               loading="lazy" decoding="async">
-          <figcaption>Formal · Derby</figcaption>
-        </figure>
-
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe6.jpg"
-               alt="Formal leather Brogue shoe"
-               loading="lazy" decoding="async">
-          <figcaption>Formal · Brogue</figcaption>
-        </figure>
-
-        <!-- Loafers -->
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe7.jpg"
-               alt="Penny leather loafer"
-               loading="lazy" decoding="async">
-          <figcaption>Loafer · Penny</figcaption>
-        </figure>
-
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe 3.webp"
-               alt="Black leather loafer"
-               loading="lazy" decoding="async">
-          <figcaption>Loafer · Black</figcaption>
-        </figure>
-
-        <figure class="showcase-item reveal">
-          <img src="../img/shoe6.jpg"
-               alt="Suede leather loafer"
-               loading="lazy" decoding="async">
-          <figcaption>Loafer · Suede</figcaption>
-        </figure>
-
-        <!-- Sandals -->
-        <figure class="showcase-item reveal">
-          <img src="../img/sandals2.webp"
-               alt="Braided leather sandal"
-               loading="lazy" decoding="async">
-          <figcaption>Sandal · Braided</figcaption>
-        </figure>
-
-        <figure class="showcase-item reveal">
-          <img src="../img/sandals1.webp"
-               alt="Slingback leather sandal"
-               loading="lazy" decoding="async">
-          <figcaption>Sandal · Slingback</figcaption>
-        </figure>
-
-        <!-- Palms -->
-        <figure class="showcase-item reveal">
-          <img src="../img/palm1.jpg"
-               alt="Leather palm slipper"
-               loading="lazy" decoding="async">
-          <figcaption>Palm · Leather</figcaption>
-        </figure>
-
-        <figure class="showcase-item reveal">
-          <img src="../img/palm2.jpg"
-               alt="Woven leather palm slipper"
-               loading="lazy" decoding="async">
-          <figcaption>Palm · Woven</figcaption>
-        </figure>
-
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <div>
+          <p class="eyebrow eyebrow--center">What We Stand For</p>
+          <h2 class="section-title">Considered <em>by design.</em></h2>
+        </div>
+      </div>
+      <div class="values">
+        <div class="value reveal">
+          <h3>Quality</h3>
+          <p>We select materials for how they wear, not just how they look. Leathers are chosen for grain, feel and durability.</p>
+        </div>
+        <div class="value reveal">
+          <h3>Craftsmanship</h3>
+          <p>Cutting, stitching and finishing are done by hand. Small details are given the same attention as the shoe itself.</p>
+        </div>
+        <div class="value reveal">
+          <h3>Directness</h3>
+          <p>We sell directly through WhatsApp. No middlemen, no unnecessary markup — just a conversation about what you need.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -504,18 +437,16 @@ p{margin:0 0 1.1em}
   <section class="section" style="padding-top:0">
     <div class="container cta-band reveal">
       <div>
-        <p class="eyebrow">Order Directly</p>
-        <h2 class="section-title">Can't decide?<br><em>We'll help.</em></h2>
-        <p>Message us on WhatsApp with your usual size and what you're looking for. Our team will recommend a pair.</p>
+        <p class="eyebrow">Visit or Order</p>
+        <h2 class="section-title">Come see the <em>workshop.</em></h2>
+        <p>Victory Line Shoe Plaza, Aba, Abia State. Nationwide delivery available.</p>
       </div>
       <div class="cta-band__actions">
-        <a class="btn btn--primary"
-           href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20help%20choosing%20a%20pair."
-           target="_blank" rel="noopener">
+        <a class="btn btn--primary" href="https://wa.me/2347036257886?text=Hello%20DE-DON%20SHOE%20PLC%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
           <svg class="wa-icon" aria-hidden="true"><use href="#wa-icon"></use></svg>
-          Chat on WhatsApp
+          Message Us Now
         </a>
-        <a class="link-arrow" href="order.html">View all footwear</a>
+        <a class="link-arrow" href="order.html">Shop the Collection</a>
       </div>
     </div>
   </section>
@@ -572,16 +503,13 @@ p{margin:0 0 1.1em}
 </footer>
 
 <script>
-/* year */
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* header shadow on scroll */
 var header = document.getElementById("siteHeader");
 window.addEventListener("scroll", function(){
   header.classList.toggle("is-scrolled", window.scrollY > 10);
 }, { passive:true });
 
-/* mobile nav */
 var toggle = document.getElementById("navToggle");
 var nav = document.getElementById("nav");
 var scrim = document.getElementById("navScrim");
@@ -603,7 +531,6 @@ nav.querySelectorAll("a").forEach(function(a){
   a.addEventListener("click", function(){ setNav(false); });
 });
 
-/* reveal on scroll */
 var rev = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window && rev.length){
   var io = new IntersectionObserver(function(entries){
